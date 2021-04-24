@@ -118,12 +118,12 @@ namespace TheGreatAdventure
                     break;
                 case 1:
                     player.Right();
-                    if (player.X > Width/2 && player.X < partOfMap * width - width/2)
+                    if (player.X > Width/2 && player.X < partOfMap * width - Width/2)
                         delta.X -= player.Speed;
                     break;
                 case 2:
                     player.Left();
-                    if (player.X > Width/2 && player.X < partOfMap * width - width/2)
+                    if (player.X > Width/2 && player.X < partOfMap * width - Width/2)
                         delta.X += player.Speed;
                     break;
                 case 3:
