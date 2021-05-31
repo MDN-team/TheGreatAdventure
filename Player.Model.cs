@@ -11,8 +11,15 @@ namespace TheGreatAdventure
     public class Player
     {
         public Image Sprites = new Bitmap("../../TestSprites.png");
-        public Image Idle = new Bitmap("../../Idle.png");
+        public Image Idle = new Bitmap("./../../Idles/IdleDown.png");
 
+        public Dictionary<string, Image> Idles = new Dictionary<string, Image>
+        {
+            ["Up"] = new Bitmap("./../../Idles/IdleUp.png"),
+            ["Down"] = new Bitmap("./../../Idles/IdleDown.png"),
+            ["Left"] = new Bitmap("./../../Idles/IdleLeft.png"),
+            ["Right"] = new Bitmap("./../../Idles/IdleRight.png")
+        };
         private Map map;
 
         public bool IsPressedAnyKeys;
