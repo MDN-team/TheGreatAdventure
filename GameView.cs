@@ -21,7 +21,7 @@ namespace TheGreatAdventure
             map = new Map(15, 15, new Size(80, 80));
 
             player = new Player(new Size(100, 100), 0, 0, map);
-            StartPlayerAnimation();
+            StartAnimations();
 
             KeyDown += PressKey;
             KeyUp += ReleaseKey;
@@ -34,6 +34,7 @@ namespace TheGreatAdventure
             var gr = e.Graphics;
             map.CreateMap(gr, offset);
             PlayAnimation(gr);
+            DrawMobs(gr);
         }
 
        
@@ -51,6 +52,18 @@ namespace TheGreatAdventure
                     player.Y + offset.Y,
                     new Rectangle(new Point(0, 0), new Size(460,600)),
                     GraphicsUnit.Pixel);
+        }
+
+        private void DrawMobs(Graphics gr)
+        {
+            foreach (var mob in mobs)
+            {
+                gr.DrawImage(mob.ZombieImg,
+                    mob.X,
+                    mob.Y,
+                    new Rectangle(new Point(0, 0), new Size(200, 350)),
+                    GraphicsUnit.Pixel);
+            }
         }
     }
 }
