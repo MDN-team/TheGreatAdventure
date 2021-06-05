@@ -1,9 +1,0 @@
-D:\C#\TheGreatAdventure\bin\Debug\TheGreatAdventure.exe.config
-D:\C#\TheGreatAdventure\bin\Debug\TheGreatAdventure.exe
-D:\C#\TheGreatAdventure\bin\Debug\TheGreatAdventure.pdb
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.csprojAssemblyReference.cache
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.Properties.Resources.resources
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.csproj.GenerateResource.cache
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.csproj.CoreCompileInputs.cache
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.exe
-D:\C#\TheGreatAdventure\obj\Debug\TheGreatAdventure.pdb
