@@ -43,6 +43,21 @@ namespace TheGreatAdventure
 
         private void ReleaseKey(object sender, KeyEventArgs e)
         {
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    player.Idle = player.Idles["Up"];
+                    break;
+                case Keys.A:
+                    player.Idle = player.Idles["Left"];
+                    break;
+                case Keys.S:
+                    player.Idle = player.Idles["Down"];
+                    break;
+                case Keys.D:
+                    player.Idle = player.Idles["Right"];
+                    break;
+            }
             player.CurrentAnimation = -1;
             player.IsPressedAnyKeys = false;
         }

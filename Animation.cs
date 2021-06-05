@@ -14,14 +14,18 @@ namespace TheGreatAdventure
     public partial class GameView
     {
         private static Timer changeFrame;
+        private static Timer zombieStepInterval;
 
-
-        private void StartPlayerAnimation()
+        private void StartAnimations()
         {
             changeFrame = new Timer();
+            zombieStepInterval = new Timer();
+            
             changeFrame.Tick += UpdateFrame;
+            zombieStepInterval.Tick += UpdateMove;
 
             changeFrame.Start();
+            zombieStepInterval.Start();
         }
 
         private void UpdateFrame(object sender, EventArgs e)
@@ -31,6 +35,13 @@ namespace TheGreatAdventure
                 player.CurrentFrame = 0;
 
             player.CurrentFrame++;
+            Invalidate();
+        }
+
+        private void UpdateMove(object sender, EventArgs e)
+        {
+            zombieStepInterval.Interval = 2000;
+            
             Invalidate();
         }
         
